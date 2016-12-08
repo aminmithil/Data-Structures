@@ -1,0 +1,19 @@
+
+public class SingleLinkedList {
+	private Link head;
+	
+	public SingleLinkedList() {
+		head = null;
+	}
+	public void addData(int data){
+		Link link = new Link(data);
+		if(head == null)
+			head = link;
+		else{
+			
+		}
+	}
+	public static void main(String args[]){
+		
+	}
+}

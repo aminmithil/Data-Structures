@@ -1,0 +1,23 @@
+
+public class SingleLinkedList {
+	private Link head;
+	
+	public SingleLinkedList() {
+		head = null;
+	}
+	public void addData(int data){
+		Link link = new Link(data);
+		if(head == null)
+			head = link;
+		else{
+			link.next = head;
+			head = link;
+		}
+	}
+	public void removeData(){
+		head = head.next;
+	}
+	public static void main(String args[]){
+		
+	}
+}

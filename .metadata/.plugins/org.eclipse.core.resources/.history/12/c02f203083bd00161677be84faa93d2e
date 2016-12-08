@@ -1,0 +1,11 @@
+
+public class SingleLinkedList {
+	private Link head;
+	
+	public SingleLinkedList() {
+		head = null;
+	}
+	public static void main(String args[]){
+		
+	}
+}
