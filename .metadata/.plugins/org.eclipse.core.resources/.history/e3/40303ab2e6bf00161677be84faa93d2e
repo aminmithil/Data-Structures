@@ -1,0 +1,45 @@
+
+public class BinarySearchTree {
+	
+	public Node root;
+	
+	public BinarySearchTree() {
+		root = null;
+	}
+	
+	public void addNode(int data){
+		Node newNode = new Node(data);
+		if(root == null){
+			root = newNode;
+		} else {
+			Node focusNode = root;
+			
+			Node parent;
+			while(true){
+				parent = focusNode;
+				
+				if(data < focusNode.getData()){
+					focusNode = focusNode.leftNode;
+					
+					if(focusNode == null){
+						parent.leftNode = newNode;
+						return;
+					}
+				} else {
+					focusNode = focusNode.rightNode;
+					
+					if(focusNode == null){
+						parent.rightNode = newNode;
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
