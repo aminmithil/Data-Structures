@@ -24,12 +24,12 @@ public class DoubleLinedList {
 	public void printReverseList(){
 		Link current = head;
 		while(current.next != null){
-			//System.out.println(current.getData());
+			System.out.println(current.getData());
 			current = current.next;
 		}
 		while(current != null){
 			System.out.println(current.getData());
-			current = current.previous;
+			current = current.previous
 		}
 	}
 	public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class DoubleLinedList {
 		dll.addData(2);
 		dll.addData(3);
 		dll.addData(4);
-		dll.printReverseList();
+		dll.printList();
 	}
 
 }

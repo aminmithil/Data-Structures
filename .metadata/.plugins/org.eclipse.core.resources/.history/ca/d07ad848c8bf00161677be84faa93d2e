@@ -38,7 +38,7 @@ public class DoubleLinedList {
 		dll.addData(2);
 		dll.addData(3);
 		dll.addData(4);
-		dll.printReverseList();
+		dll.printList();
 	}
 
 }
