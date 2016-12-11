@@ -24,6 +24,16 @@ public class SingleLinkedList {
 			tempList = tempList.next;
 		}
 	}
+	public void insertAfter(int after, int data){
+		Link tempLink = head;
+		while(tempLink.getData() != after){
+			tempLink = tempLink.next;
+		}
+		Link newLink = new Link(data);
+		Link nextLink = tempLink.next;
+		tempLink.next = newLink;
+		newLink.next = nextLink;
+	}
 	public static void main(String args[]){
 		SingleLinkedList list = new SingleLinkedList();
 		list.addData(1);
@@ -32,7 +42,7 @@ public class SingleLinkedList {
 		list.addData(4);
 		list.addData(5);
 		list.addData(6);
-		list.removeData();
+		list.insertAfter(3, 7);
 		list.printList();
 	}
 }

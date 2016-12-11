@@ -1,0 +1,43 @@
+
+public class DoubleLinedList {
+	public Link head;
+	
+	public DoubleLinedList() {
+		head = null;
+	}
+	public void addData(int data){
+		if(head == null) {
+			Link link = new Link(null, data, null);
+		} else{
+			Link newLink = new Link(null, data, head);
+			head.previous = newLink;
+			head = newLink;
+		}
+	}
+	public void printList(){
+		Link temp = head;
+		while(temp != null){
+			System.out.println(temp.getData());
+			temp = temp.next;
+		}
+	}
+	public void printReverseList(){
+		Link temp = head;
+		while(temp.next != null){
+			temp = temp.next;
+		}
+		while(temp != null){
+			System.out.println(temp.getData());
+			temp = temp.previous;
+		}
+	}
+	public static void main(String[] args) {
+		DoubleLinedList list = new DoubleLinedList();
+		list.addData(1);
+		list.addData(2);
+		list.addData(3);
+		list.addData(4);
+		list.printList();
+	}
+
+}

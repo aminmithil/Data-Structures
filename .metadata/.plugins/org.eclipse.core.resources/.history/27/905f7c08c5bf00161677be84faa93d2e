@@ -1,0 +1,28 @@
+
+public class DoubleLinedList {
+	public Link head;
+	
+	public DoubleLinedList() {
+		head = null;
+	}
+	public void addData(int data){
+		if(head == null) {
+			Link link = new Link(null, data, null);
+		} else{
+			Link newLink = new Link(null, data, head);
+			head.previous = newLink;
+			head = newLink;
+		}
+	}
+	public void printList(){
+		Link temp = head;
+		while(temp != null){
+			System.out.println(temp.getData());
+			temp = temp.next;
+		}
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
