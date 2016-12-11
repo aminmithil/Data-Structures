@@ -1,0 +1,22 @@
+
+public class DoubleLinedList {
+	public Link head;
+	
+	public DoubleLinedList() {
+		head = null;
+	}
+	public void addData(int data){
+		if(head == null) {
+			Link link = new Link(null, data, null);
+		} else{
+			Link newLink = new Link(null, data, head);
+			head.previous = newLink;
+			head = newLink;
+		}
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

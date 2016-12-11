@@ -1,0 +1,12 @@
+
+public class DoubleLinedList {
+	public Link head;
+	
+	public void addData(int data){
+		
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
