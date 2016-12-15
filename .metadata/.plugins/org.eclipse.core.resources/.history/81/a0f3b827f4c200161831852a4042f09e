@@ -48,25 +48,19 @@ public class SingleLinkedList {
 			deleteAll(data);
 		} else {
 			Link temp = head;
-			Link previous = head;
 			while(temp.next != null){
-				while(temp.next.getData() == data && temp.next.next != null){
+				while(temp.next.getData() == data){
 					temp.next = temp.next.next;
 				}
-				if(temp.next.next == null)
-					temp.next = null;		
-				else
-					temp = temp.next;
+				temp = temp.next;
 			}
-			//if(temp.next == null && temp.getData() == data)
-				
 		}
 	}
 	
 	public static void main(String args[]){
 		SingleLinkedList list = new SingleLinkedList();
 		list.addData(2);
-		list.addData(2);
+		list.addData(1);
 		list.addData(3);
 		list.addData(2);
 		list.addData(2);

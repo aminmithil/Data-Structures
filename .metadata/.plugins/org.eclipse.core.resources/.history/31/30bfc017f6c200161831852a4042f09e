@@ -54,7 +54,7 @@ public class SingleLinkedList {
 					temp.next = temp.next.next;
 				}
 				if(temp.next.next == null)
-					temp.next = null;		
+					return;
 				else
 					temp = temp.next;
 			}
@@ -70,7 +70,7 @@ public class SingleLinkedList {
 		list.addData(3);
 		list.addData(2);
 		list.addData(2);
-		list.addData(2);
+		list.addData(1);
 		list.deleteAll(2);
 		list.printList();
 	}
