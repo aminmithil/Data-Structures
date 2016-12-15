@@ -64,7 +64,7 @@ public class SingleLinkedList {
 		SingleLinkedList list = new SingleLinkedList();
 		list.addData(2);
 		list.addData(2);
-		list.addData(3);
+		list.addData(2);
 		list.addData(2);
 		list.addData(2);
 		list.addData(2);

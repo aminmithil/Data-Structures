@@ -48,6 +48,7 @@ public class SingleLinkedList {
 			deleteAll(data);
 		} else {
 			Link temp = head;
+			Link previous = head;
 			while(temp.next != null){
 				while(temp.next.getData() == data && temp.next.next != null){
 					temp.next = temp.next.next;
@@ -56,7 +57,9 @@ public class SingleLinkedList {
 					temp.next = null;		
 				else
 					temp = temp.next;
-			}	
+			}
+			//if(temp.next == null && temp.getData() == data)
+				
 		}
 	}
 	
