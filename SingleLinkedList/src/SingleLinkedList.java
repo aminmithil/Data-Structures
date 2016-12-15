@@ -41,15 +41,30 @@ public class SingleLinkedList {
 		tempLink.next = newLink;
 		newLink.next = nextLink;
 	}
+	
+	public void deleteAll(int data){
+		Link temp = head;
+		if(temp.getData() == data && temp == head){
+			head = head.next;
+			temp = head;
+		}
+		while(temp.next != null){
+			while(temp.next.getData() == data){
+				temp.next = temp.next.next;
+			}
+			temp = temp.next;
+		}
+	}
+	
 	public static void main(String args[]){
 		SingleLinkedList list = new SingleLinkedList();
 		list.addData(1);
 		list.addData(2);
 		list.addData(3);
-		list.addData(4);
-		list.addData(5);
+		list.addData(2);
+		list.addData(2);
 		list.addData(6);
-		list.deleteData(4);
+		list.deleteAll(2);
 		list.printList();
 	}
 }

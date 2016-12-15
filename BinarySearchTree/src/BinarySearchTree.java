@@ -195,8 +195,8 @@ public class BinarySearchTree {
 		tree.addNode(7);
 		tree.addNode(9);
 		tree.addNode(12);
-		//tree.addNode(10);
-		
+		tree.addNode(10);
+
 		System.out.println(tree.isBalanced(root));
 		for(Integer h : tree.heightsFound){
 			System.out.println(h);
