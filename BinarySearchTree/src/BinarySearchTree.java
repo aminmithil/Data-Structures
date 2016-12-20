@@ -169,6 +169,19 @@ public class BinarySearchTree {
 		return replacement;
 	}
 	
+	public int maxDepth(Node node){
+		if(node == null)
+			return 0;
+		else {
+			int leftDepth = maxDepth(node.leftNode);
+			int rightDepth = maxDepth(node.rightNode);
+			
+			if(leftDepth > rightDepth)
+				return leftDepth+1;
+			else
+				return rightDepth+1;
+		}
+	}
 	public boolean isBalanced(Node node){
 		return isBalanced(node, 0);
 	}
@@ -197,16 +210,12 @@ public class BinarySearchTree {
 		tree.addNode(12);
 		tree.addNode(10);
 
-		System.out.println(tree.isBalanced(root));
-		for(Integer h : tree.heightsFound){
-			System.out.println(h);
-		}
-		/* 
-		 * 				8
-		 * 			6			11
-		 * 		5		7	9		12
+		System.out.println(tree.maxDepth(root));
+		
+		/*				8
+		 * 		6				11	
+		 * 5		7		9		12
 		 * 						10
-		 * 
-		 * */
+		 */
 	}
 }
