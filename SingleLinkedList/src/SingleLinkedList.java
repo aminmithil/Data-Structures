@@ -19,6 +19,9 @@ public class SingleLinkedList {
 	}
 	public void printList(){
 		Link tempList = head;
+		if(head == null){
+			System.out.println("No Data Inserted");
+		}
 		while(tempList != null){
 			System.out.println(tempList.getData());
 			tempList = tempList.next;
@@ -48,15 +51,13 @@ public class SingleLinkedList {
 			deleteAll(data);
 		} else {
 			Link temp = head;
-			while(temp.next != null){
-				while(temp.next.getData() == data && temp.next.next != null){
-					temp.next = temp.next.next;
-				}
-				if(temp.next.next == null)
-					temp.next = null;		
-				else
-					temp = temp.next;
-			}	
+			while(temp.next.getData() == data && temp.next.next != null){
+				temp.next = temp.next.next;
+			}
+			if(temp.next.next == null)
+				temp.next = null;		
+			else
+				temp = temp.next;	
 		}
 	}
 	
