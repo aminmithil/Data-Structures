@@ -1,0 +1,9 @@
+
+public class QuickSort {
+
+	public static int partation(int arr[], int low, int high){
+		int i = low;
+		
+		return i;
+	}
+}

@@ -1,0 +1,16 @@
+
+public class QuickSort {
+
+	public static int partation(int arr[], int low, int high){
+		int i = low-1;
+		int pivot = arr[high];
+		int temp;
+		for(int j=low; j<high; j++){
+			if(arr[j] <= pivot){
+				temp = arr[j];
+				arr[j] = arr[i];
+			}
+		}
+		return i;
+	}
+}
