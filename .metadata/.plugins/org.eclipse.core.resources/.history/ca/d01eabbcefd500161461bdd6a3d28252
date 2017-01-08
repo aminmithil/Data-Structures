@@ -1,0 +1,36 @@
+
+public class QuickSort {
+
+	public static int partation(int arr[], int low, int high){
+		int i = low;
+		int pivot = arr[high];
+		int temp;
+		for(int j=low; j<high; j++){
+			if(arr[j] <= pivot){
+				temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;
+				i++;
+			}
+		}
+		
+		temp = arr[high];
+		arr[high] = arr[i];
+		arr[i] = temp;
+		
+		return i;
+	}
+	
+	public static void quickSort(int arr[], int low, int high){
+		if(low < high){
+			int pi = partation(arr, low, high);
+			
+			quickSort(arr, low, pi);
+			quickSort(arr, pi+1, high);
+		}
+	}
+	
+	public static void main(String args[]){
+		
+	}
+}
